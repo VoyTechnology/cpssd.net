@@ -1,0 +1,49 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # TODO: Replace with a hugo dedicated build image
+      - image: alpine:latest
+    working_directory: /cpssd.net
+    steps:
+      - checkout
+      - run:
+          name: "Install OS dependencies"
+          command: apk add -U wget
+      - run:
+          name: "Download Hugo"
+          command: ./.circleci/install.sh
+      - run:
+          name: "Build Site"
+          command: HUGO_ENV=production hugo -v
+      - persist_to_workspace:
+          root: /cpssd.net
+          paths: .
+  # TODO: Add a test job to test for broken links and bad markdown.
+  deploy:
+    docker:
+      - image: alpine:latest
+    working_directory: /cpssd.net
+    steps:
+      - attach_workspace:
+          at: /cpssd.net
+      - run:
+          name: "Install OS dependencies"
+          command: apk add -U git
+      - run:
+          name: "Add CNAME"
+          command: echo "cpssd.net" >> static/CNAME
+      - run:
+          name: "Deploy (if master)"
+          command: ./.circleci/deploy.sh
+
+workflows:
+  version: 2
+  build-and-deploy:
+    - build
+    - deploy:
+        requires:
+          - build
+        filters:
+          branches:
+            only: master
