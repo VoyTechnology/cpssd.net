@@ -1,6 +1,6 @@
 baseURL: https://cpssd.net
 disablePathToLower: true
-languageCode: en-us
+languageCode: en-ie
 title: The Unofficial CPSSD Homepage
 theme: cpssd
 params:
