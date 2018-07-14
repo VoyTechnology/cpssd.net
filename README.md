@@ -22,9 +22,17 @@ hugo server
 
 Feel free to submit pull requests, make issues, and edit anything and everything.
 
+<<<<<<< HEAD
 Anybody can add a post to the blog. Just create a new file in `content/blog/`,
 probably prefix it with a year if its a recurring event or something. You can
 just copy the definition at the top from another file.
+=======
+Anyone can add a post to the blog. We'll figure out some way of organising that
+as it goes. Just copy the format of an existing post and submit a pull
+request. Anybody can add a post to the blog. Just create a new file in
+`content/blog/`, probably prefix it with a year if its a recurring event or
+something. You can just copy the definition at the top from another file.
+>>>>>>> 842ac2d6d56cd309f322a44976cd8f876060b4c0
 
 If you are creating a top level file, make sure to add `type: 'root-page'` if
 you want it to be in the menu

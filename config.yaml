@@ -1,5 +1,10 @@
 baseURL: https://cpssd.net
+<<<<<<< HEAD
 languageCode: en-us
+=======
+disablePathToLower: true
+languageCode: en-ie
+>>>>>>> 842ac2d6d56cd309f322a44976cd8f876060b4c0
 title: The Unofficial CPSSD Homepage
 theme: cpssd
 params:
