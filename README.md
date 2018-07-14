@@ -1,5 +1,5 @@
-cpssd.net
-=========
+# cpssd.net
+
 
 This is an unoffical hub for CPSSD, because the real website is very static,
 full of typos, inaccessible to any of us, and just generally dense and formal.
@@ -22,8 +22,6 @@ hugo server
 
 Feel free to submit pull requests, make issues, and edit anything and everything.
 
-Anyone can add a post to the blog. We'll figure out some way of organising that as it goes. Just copy the format of an existing post and submit a pull request.
-
 Anybody can add a post to the blog. Just create a new file in `content/blog/`,
 probably prefix it with a year if its a recurring event or something. You can
 just copy the definition at the top from another file.
@@ -32,6 +30,7 @@ If you are creating a top level file, make sure to add `type: 'root-page'` if
 you want it to be in the menu
 
 ### Editing your info in `/students`
+
 There is a file `data/students.yaml` containing all the links to your sites.
 If you want to create another column you can do so in
 `themes/cpssd/layouts/shortcodes/student-table.html`, but probably only do it
