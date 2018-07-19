@@ -1,5 +1,5 @@
-{{range .Site.Data.students}}
-  <table>
+{{ range .Site.Data.students }}
+  <table id="students">
     <tr><td><h2>Graduating {{ .graduation }}</h2></td></tr>
   {{ range .students }}
     <tr>
@@ -9,6 +9,6 @@
       <td>{{with .twitter}}{{if .}}<a href="{{.}}">twitter</a>{{else}}&nbsp;{{end}}{{end}}</td>
       <td>{{with .linkedin}}{{if .}}<a href="{{.}}">linkedin</a>{{else}}&nbsp;{{end}}{{end}}</td>
     </tr>
-  {{ end}}
+  {{ end }}
   </table>
 {{ end }}
