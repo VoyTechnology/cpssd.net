@@ -1,4 +1,4 @@
-{{ template "theme/partials/header.html" . }}
+{{ partial "header.html" . }}
 {{ range where .Data.Pages "Type" "!=" "root-page" }}
   <article>
     <h3 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
@@ -7,4 +7,4 @@
   </article>
 {{ end }}
 </section>
-{{ template "theme/partials/footer.html" . }}
+{{ partial "footer.html" . }}

@@ -1,4 +1,4 @@
-{{ template "theme/partials/header.html" . }}
+{{ partial "header.html" . }}
 <section>
   {{ if ne .Type "root-page"}}
   <h3 class="title">{{ .Title }}</h3>
@@ -6,4 +6,4 @@
   {{ end }}
   {{ .Content }}
 </section>
-{{ template "theme/partials/footer.html" . }}
+{{ partial "footer.html" . }}
